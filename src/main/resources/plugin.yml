@@ -1,0 +1,4 @@
+name: EDPEnchants
+version: '${project.version}'
+main: me.frxq.edpenchants.EDPEnchants
+api-version: '1.19'
