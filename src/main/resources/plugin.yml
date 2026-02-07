@@ -1,4 +1,4 @@
-name: EDPEnchants
+name: enchants-core
 version: '${project.version}'
 main: me.frxq.edpenchants.EDPEnchants
 api-version: '1.19'

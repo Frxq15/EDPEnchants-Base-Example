@@ -1,6 +1,8 @@
 package me.frxq.edpenchants;
 
 import me.frxq.edpenchants.enchant.EnchantRegistry;
+import me.frxq.edpenchants.util.BlockUtils;
+import me.frxq.edpenchants.util.RegionUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -8,6 +10,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class EDPEnchants extends JavaPlugin {
     private static EDPEnchants instance;
     private static EnchantRegistry enchantRegistry;
+    private BlockUtils blockUtils;
+    private RegionUtils regionUtils;
 
     @Override
     public void onEnable() {
@@ -38,5 +42,11 @@ public final class EDPEnchants extends JavaPlugin {
     public void registry() {
         enchantRegistry = new EnchantRegistry(this);
         enchantRegistry.register();
+
+        this.blockUtils = new BlockUtils();
+        this.regionUtils = new RegionUtils();
+
     }
+    public BlockUtils getBlockUtils() { return blockUtils; }
+    public RegionUtils getRegionUtils() { return regionUtils; }
 }

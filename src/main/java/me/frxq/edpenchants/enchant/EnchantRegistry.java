@@ -3,6 +3,7 @@ package me.frxq.edpenchants.enchant;
 import com.edwardbelt.edprison.EdPrison;
 import me.frxq.edpenchants.EDPEnchants;
 import me.frxq.edpenchants.enchant.enchantments.ExampleEnchant;
+import me.frxq.edpenchants.enchant.enchantments.TestEnchant;
 
 public class EnchantRegistry {
     public EDPEnchants plugin = EDPEnchants.getInstance();
@@ -13,5 +14,6 @@ public class EnchantRegistry {
 
     public void register() {
         ExampleEnchant exampleEnchant = new ExampleEnchant();
+        TestEnchant testEnchant = new TestEnchant(plugin);
     }
 }
