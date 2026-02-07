@@ -51,6 +51,7 @@ public class BlockUtils {
     public static CompletableFuture<Integer> removeBlocksInRadius(Block startBlock, double radius, String effect) {
         CompletableFuture<Integer> future = new CompletableFuture<>();
         AtomicInteger blocksRemoved = new AtomicInteger(0);
+        //
 
         new BukkitRunnable() {
             @Override
